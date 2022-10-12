@@ -1,0 +1,26 @@
+Source: markupsafe
+Section: python
+Priority: optional
+Maintainer: Piotr Ożarowski <piotr@debian.org>
+Uploaders:
+ Debian Python Team <team+python@tracker.debian.org>,
+Build-Depends:
+ debhelper-compat (= 12),
+ dh-python,
+ python3-all-dev,
+ python3-setuptools,
+Standards-Version: 4.5.0
+Homepage: https://palletsprojects.com/p/markupsafe/
+Vcs-Git: https://salsa.debian.org/python-team/packages/markupsafe.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/markupsafe
+
+Package: python3-markupsafe
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Description: HTML/XHTML/XML string library
+ MarkupSafe is a Python library implementing a unicode subclass that is
+ aware of HTML escaping rules. It can be used to implement automatic
+ string escaping.
