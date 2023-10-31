@@ -14,6 +14,7 @@ docs/html.rst
 docs/index.rst
 docs/license.rst
 docs/make.bat
+requirements/build.txt
 requirements/dev.txt
 requirements/docs.txt
 requirements/tests.txt

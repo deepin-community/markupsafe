@@ -1,3 +1,44 @@
+Version 2.1.3
+-------------
+
+Released 2023-06-02
+
+-   Implement ``format_map``, ``casefold``, ``removeprefix``, and ``removesuffix``
+    methods. :issue:`370`
+-   Fix static typing for basic ``str`` methods on ``Markup``. :issue:`358`
+-   Use ``Self`` for annotating return types. :pr:`379`
+
+
+Version 2.1.2
+-------------
+
+Released 2023-01-17
+
+-   Fix ``striptags`` not stripping tags containing newlines.
+    :issue:`310`
+
+
+Version 2.1.1
+-------------
+
+Released 2022-03-14
+
+-   Avoid ambiguous regex matches in ``striptags``. :pr:`293`
+
+
+Version 2.1.0
+-------------
+
+Released 2022-02-17
+
+-   Drop support for Python 3.6. :pr:`262`
+-   Remove ``soft_unicode``, which was previously deprecated. Use
+    ``soft_str`` instead. :pr:`261`
+-   Raise error on missing single placeholder during string
+    interpolation. :issue:`225`
+-   Disable speedups module for GraalPython. :issue:`277`
+
+
 Version 2.0.1
 -------------
 
@@ -37,7 +78,7 @@ Released 2018-11-05
 -   Build wheels for Linux, Mac, and Windows, allowing systems without
     a compiler to take advantage of the C extension speedups. :pr:`104`
 -   Use newer CPython API on Python 3, resulting in a 1.5x speedup.
-    :pr`64`
+    :pr:`64`
 -   ``escape`` wraps ``__html__`` result in ``Markup``, consistent with
     documented behavior. :pr:`69`
 

@@ -1,10 +1,10 @@
 import os
 import platform
 import sys
+
 from distutils.errors import CCompilerError
 from distutils.errors import DistutilsExecError
 from distutils.errors import DistutilsPlatformError
-
 from setuptools import Extension
 from setuptools import setup
 from setuptools.command.build_ext import build_ext
@@ -22,18 +22,18 @@ class ve_build_ext(build_ext):
     def run(self):
         try:
             build_ext.run(self)
-        except DistutilsPlatformError:
-            raise BuildFailed()
+        except DistutilsPlatformError as e:
+            raise BuildFailed() from e
 
     def build_extension(self, ext):
         try:
             build_ext.build_extension(self, ext)
-        except (CCompilerError, DistutilsExecError, DistutilsPlatformError):
-            raise BuildFailed()
-        except ValueError:
+        except (CCompilerError, DistutilsExecError, DistutilsPlatformError) as e:
+            raise BuildFailed() from e
+        except ValueError as e:
             # this can happen on Windows 64 bit, see Python issue 7511
             if "'path'" in str(sys.exc_info()[1]):  # works with Python 2 and 3
-                raise BuildFailed()
+                raise BuildFailed() from e
             raise
 
 
@@ -52,7 +52,11 @@ def show_message(*lines):
     print("=" * 74)
 
 
-supports_speedups = platform.python_implementation() not in {"PyPy", "Jython"}
+supports_speedups = platform.python_implementation() not in {
+    "PyPy",
+    "Jython",
+    "GraalVM",
+}
 
 if os.environ.get("CIBUILDWHEEL", "0") == "1" and supports_speedups:
     run_setup(True)
