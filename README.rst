@@ -17,7 +17,7 @@ Install and update using `pip`_:
 
     pip install -U MarkupSafe
 
-.. _pip: https://pip.pypa.io/en/stable/quickstart/
+.. _pip: https://pip.pypa.io/en/stable/getting-started/
 
 
 Examples
@@ -64,6 +64,4 @@ Links
 -   PyPI Releases: https://pypi.org/project/MarkupSafe/
 -   Source Code: https://github.com/pallets/markupsafe/
 -   Issue Tracker: https://github.com/pallets/markupsafe/issues/
--   Website: https://palletsprojects.com/p/markupsafe/
--   Twitter: https://twitter.com/PalletsTeam
 -   Chat: https://discord.gg/pallets

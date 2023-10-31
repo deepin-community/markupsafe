@@ -32,16 +32,14 @@ html_context = {
         ProjectLink("PyPI Releases", "https://pypi.org/project/MarkupSafe/"),
         ProjectLink("Source Code", "https://github.com/pallets/markupsafe/"),
         ProjectLink("Issue Tracker", "https://github.com/pallets/markupsafe/issues/"),
-        ProjectLink("Website", "https://palletsprojects.com/p/markupsafe/"),
-        ProjectLink("Twitter", "https://twitter.com/PalletsTeam"),
         ProjectLink("Chat", "https://discord.gg/pallets"),
     ]
 }
 html_sidebars = {
-    "index": ["project.html", "localtoc.html", "searchbox.html"],
-    "**": ["localtoc.html", "relations.html", "searchbox.html"],
+    "index": ["project.html", "localtoc.html", "searchbox.html", "ethicalads.html"],
+    "**": ["localtoc.html", "relations.html", "searchbox.html", "ethicalads.html"],
 }
-singlehtml_sidebars = {"index": ["project.html", "localtoc.html"]}
+singlehtml_sidebars = {"index": ["project.html", "localtoc.html", "ethicalads.html"]}
 html_title = f"MarkupSafe Documentation ({version})"
 html_show_sourcelink = False
 
