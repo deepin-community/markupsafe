@@ -1,3 +1,20 @@
+Version 2.1.5
+-------------
+
+Released 2024-02-02
+
+-   Fix ``striptags`` not collapsing spaces. :issue:`417`
+
+
+Version 2.1.4
+-------------
+
+Released 2024-01-19
+
+-   Don't use regular expressions for ``striptags``, avoiding a performance
+    issue. :pr:`413`
+
+
 Version 2.1.3
 -------------
 
